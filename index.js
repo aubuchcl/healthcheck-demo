@@ -10,7 +10,7 @@ app.get('/_health', (req, res) => {
 });
 
 // Start the server on port 3000
-app.listen(3000, () => {
+const server = app.listen(3000, () => {
   console.log('Server is running on port 3000');
 });
 
