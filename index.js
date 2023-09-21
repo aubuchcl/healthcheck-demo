@@ -14,3 +14,11 @@ app.listen(3000, () => {
   console.log('Server is running on port 3000');
 });
 
+// Gracefully stop the server on SIGINT
+process.on('SIGINT', () => {
+  console.log('Received SIGINT, shutting down server...');
+  server.close(() => {
+    console.log('Server has been shut down.');
+    process.exit(0);
+  });
+});
