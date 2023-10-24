@@ -1,7 +1,7 @@
 # Use the lightweight Alpine-based Node image
 FROM node:alpine
 
-RUN apk add --update curl jq
+RUN apk add --update curl jq alpine-sdk
 # Set the working directory inside the container
 WORKDIR /usr/app
 
