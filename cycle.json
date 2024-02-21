@@ -1,0 +1,36 @@
+{
+    "version": "1.0",
+    "containers": {
+      "health-check": {
+        "name": "health-check",
+        "image": {
+          "name": "health-check",
+          "origin": {
+            "type": "docker-file",
+            "details": {
+              "context_dir": "/",
+              "build_file": "/Dockerfile"
+            }
+          }
+        },
+        "config": {
+          "network": {
+            "public": "enable",
+            "hostname": "health-check`",
+            "ports": ["80:80"]
+          },
+          "deploy": {
+            "instances": 1,
+            "health_check": {
+                "command": "./health_check.sh",
+                "retries": 3,
+                "interval": "10s",
+                "timeout": "30s",
+                "restart": true,
+                "delay": "10s"
+            }
+          }
+        }
+      }
+      
+  }
