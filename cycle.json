@@ -1,10 +1,10 @@
 {
     "version": "1.0",
     "containers": {
-      "health-check": {
-        "name": "health-check",
+      "healthcheck": {
+        "name": "healthcheck",
         "image": {
-          "name": "health-check",
+          "name": "healthcheck",
           "origin": {
             "type": "docker-file",
             "details": {
@@ -16,7 +16,7 @@
         "config": {
           "network": {
             "public": "enable",
-            "hostname": "health-check`",
+            "hostname": "healthcheck",
             "ports": ["80:80"]
           },
           "deploy": {
