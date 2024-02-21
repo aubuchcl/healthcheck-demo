@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # Set the URL of the endpoint
-URL="http://localhost:3000/_health"
+URL="http://localhost:3000/breakme"
 
 # Make the HTTP request
 RESPONSE=$(curl --silent --request GET $URL)
