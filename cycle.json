@@ -27,7 +27,7 @@
                         "all": ["gcp"]
                     }
                 }
-            }
+            },
             "health_check": {
                 "command": "./health_check.sh",
                 "retries": 3,
